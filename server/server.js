@@ -24,6 +24,10 @@ app.use("/api/suites", suiteRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/admin", adminRoutes);
 
+app.get("/", (_, res) => {
+	res.json("good mourning.");
+});
+
 // Error handler
 app.use(errorHandler);
 

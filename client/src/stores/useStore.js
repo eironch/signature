@@ -1,6 +1,9 @@
 import { create } from "zustand";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL =
+	import.meta.env.VITE_ENV === "production"
+		? import.meta.env.VITE_BACKEND_URL
+		: "http://localhost:5000/api";
 
 const useStore = create((set, get) => ({
 	// Auth State
