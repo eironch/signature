@@ -10,7 +10,7 @@ import SuiteCard from "../components/SuiteCard";
 import Testimonial from "../components/Testimonial";
 import FBIcon from "../assets/fb_icon.svg";
 import IGIcon from "../assets/ig_icon.svg";
-import XIcon from "../assets/X_icon.svg";
+import XIcon from "../assets/x_icon.svg";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
