@@ -12,5 +12,5 @@
       "dest": "server.js"
     }
   ],
-  "installCommand": "pnpm install"
+  "installCommand": "pnpm install mysql2 && pnpm install"
 }
