@@ -19,13 +19,13 @@ const SuiteList = () => {
 	};
 
 	return (
-		<div className="p-6">
+		<div className="py-12 flex items-center flex-col">
 			<AnimatedDiv>
-				<h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">Luxury Suites</h1>
+				<h1 className="text-4xl font-bold text-b mb-8 text-center font-young-med">Luxury Suites</h1>
 			</AnimatedDiv>
 
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-				{suites.map((suite, index) => (
+			<div className="flex flex-col gap-12 w-10/12">
+				{suites.map((suite) => (
 					<SuiteCard key={suite.id} suite={suite} onBook={handleBook} />
 				))}
 			</div>

@@ -59,8 +59,8 @@ const BookingModal = ({ suite, onClose, onConfirm }) => {
 	};
 
 	return (
-		<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-			<AnimatedDiv className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+		<div className="fixed inset-0 bg-black/60 flex items-center justify-center p-4 z-50 pointer-events-none">
+			<AnimatedDiv className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto pointer-events-auto">
 				<div className="p-6">
 					<div className="flex justify-between items-start mb-4">
 						<h2 className="text-2xl font-bold text-gray-800">Book {suite.name}</h2>
@@ -77,7 +77,7 @@ const BookingModal = ({ suite, onClose, onConfirm }) => {
 								min={new Date().toISOString().split("T")[0]}
 								value={bookingData.checkInDate}
 								onChange={(e) => setBookingData({ ...bookingData, checkInDate: e.target.value })}
-								className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+								className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
 							/>
 						</div>
 
@@ -88,7 +88,7 @@ const BookingModal = ({ suite, onClose, onConfirm }) => {
 								min={bookingData.checkInDate || new Date().toISOString().split("T")[0]}
 								value={bookingData.checkOutDate}
 								onChange={(e) => setBookingData({ ...bookingData, checkOutDate: e.target.value })}
-								className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+								className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
 							/>
 						</div>
 
@@ -99,7 +99,7 @@ const BookingModal = ({ suite, onClose, onConfirm }) => {
 								onChange={(e) =>
 									setBookingData({ ...bookingData, numberOfGuests: parseInt(e.target.value) })
 								}
-								className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+								className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
 							>
 								{[...Array(suite.capacity)].map((_, i) => (
 									<option key={i + 1} value={i + 1}>
@@ -116,17 +116,17 @@ const BookingModal = ({ suite, onClose, onConfirm }) => {
 								onChange={(e) =>
 									setBookingData({ ...bookingData, specialRequests: e.target.value })
 								}
-								className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+								className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
 								rows="3"
 								placeholder="Any special requests..."
 							/>
 						</div>
 
 						{bookingData.checkInDate && bookingData.checkOutDate && (
-							<div className="bg-orange-50 p-4 rounded-lg">
+							<div className="bg-amber-50 p-4 rounded-lg">
 								<div className="flex justify-between items-center">
 									<span className="font-semibold text-gray-700">Total Amount:</span>
-									<span className="text-2xl font-bold text-orange-600">
+									<span className="text-2xl font-bold text-amber-600">
 										₱{calculateTotal().toLocaleString()}
 									</span>
 								</div>
@@ -163,7 +163,7 @@ const BookingModal = ({ suite, onClose, onConfirm }) => {
 							<button
 								onClick={handleBooking}
 								disabled={loading || !availability?.isAvailable}
-								className="flex-1 bg-gradient-to-r from-orange-400 to-amber-400 text-white py-3 rounded-lg font-semibold hover:from-orange-500 hover:to-amber-500 transition-all disabled:opacity-50"
+								className="flex-1 bg-amber-400 text-white py-3 rounded-lg font-semibold hover:bg-amber-500 transition-all disabled:opacity-50"
 							>
 								{loading ? "Booking..." : "Confirm Booking"}
 							</button>

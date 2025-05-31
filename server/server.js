@@ -36,7 +36,7 @@ const startServer = async () => {
 		console.log("Database connected successfully");
 
 		// Sync models
-		if (process.env.ENV != "production") await sql.sync({ alter: true });
+		// if (process.env.ENV != "production") await sql.sync({ alter: true });
 		console.log("Database synced");
 
 		// Initialize default suites
