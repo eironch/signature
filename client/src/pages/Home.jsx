@@ -35,7 +35,7 @@ const Home = () => {
 					<div className="relative h-screen w-screen flex flex-col items-center justify-center">
 						<img className="absolute h-full w-full object-cover" src={BedroomImage} />
 						<div className="absolute h-full w-full bg-g/60"></div>
-						<h1 className="text-6xl md:text-8xl tracking-widest font-bold text-c z-10 font-athena">
+						<h1 className="text-5xl sm:text-8xl tracking-widest font-bold text-c z-10 font-athena">
 							SIGNATURÉ
 						</h1>
 						<p className="text-2xl text-a z-10 font-young-med mb-60">Hotel & Resort</p>
@@ -47,7 +47,7 @@ const Home = () => {
 							BOOK NOW
 						</button>
 					</div>
-					<div className="flex w-screen min-h-screen justify-center items-center py-26">
+					<div className="flex w-screen min-h-screen justify-center items-center py-40">
 						<div className="flex sm:px-96 px-6">
 							<div className="w- flex flex-col items-end z-10 relative">
 								<img className="w-full sm:h-96 object-cover" src={HallImage} />
@@ -84,7 +84,7 @@ const Home = () => {
 						</div>
 					</div>
 
-					<div className="min-h-screen w-screen flex justify-center py-26">
+					<div className="min-h-screen w-screen flex justify-center py-40">
 						<div className="flex flex-col gap-20 w-10/12">
 							{suites.map((suite) => (
 								<SuiteCard key={suite.id} suite={suite} onBook={handleBook} />
@@ -103,7 +103,7 @@ const Home = () => {
 						</div>
 					</div>
 
-					<div className="min-h-screen flex justify-center py-26 bg-c">
+					<div className="min-h-screen flex justify-center py-40 bg-c">
 						<div className="flex flex-col gap-24 w-8/12">
 							<Testimonial />
 						</div>
