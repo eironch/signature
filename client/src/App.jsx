@@ -21,14 +21,14 @@ const AppContent = () => {
 				<>
 					<header className="sticky top-0 z-40 font-young">
 						<div className="container mx-auto px-4 py-4 flex items-center justify-between">
-							<div className="flex-1 items-center space-x-4">
+							<div className="flex-1 items-center space-x-4 flex ">
 								<button
 									onClick={toggleSidebar}
 									className="md:hidden text-amber-400 hover:text-amber-500"
 								>
 									<Menu className="w-6 h-6" />
 								</button>
-								<Link to="/" className="text-2xl font-bold text-amber-400 hover:text-amber-500">
+								<Link to="/" className="sm:text-2xl text-base font-bold text-amber-400 hover:text-amber-500">
 									SIGNATURÉ
 								</Link>
 							</div>
@@ -71,7 +71,7 @@ const AppContent = () => {
 							</nav>
 
 							<Link to="/profile" className="flex-1 flex justify-end items-center space-x-3">
-								<div className="text-2xl font-bold text-amber-400 hover:text-amber-500">
+								<div className="sm:text-2xl text-base font-bold text-amber-400 hover:text-amber-500">
 									Welcome, {user?.firstName || user?.username}
 								</div>
 								<div className="w-10 h-10 bg-amber-400 rounded-full flex items-center justify-center text-g font-semibold">
@@ -82,24 +82,24 @@ const AppContent = () => {
 					</header>
 
 					<div
-						className={`fixed inset-0 bg-black bg-opacity-50 z-50 md:hidden transition-opacity duration-300 ${
+						className={`fixed inset-0 bg-opacity-50 z-50 md:hidden transition-opacity duration-300 font-young text-amber-400 ${
 							sidebarOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
 						}`}
 						onClick={toggleSidebar}
 					>
 						<div
-							className={`fixed left-0 top-0 h-full w-64 shadow-xl transform transition-transform duration-300 ${
+							className={`fixed left-0 top-0 h-full w-64 bg-f shadow-xl transform transition-transform duration-300 ${
 								sidebarOpen ? "translate-x-0" : "-translate-x-full"
 							}`}
 							onClick={(e) => e.stopPropagation()}
 						>
 							<div className="p-6">
-								<h2 className="text-2xl font-bold text-gray-800 mb-6">SIGNATURE</h2>
+								<h2 className="text-2xl font-bold mb-6">SIGNATURE</h2>
 								<nav className="space-y-4">
 									<Link
 										to="/"
 										onClick={toggleSidebar}
-										className="flex items-center space-x-3 text-gray-600 hover:text-amber-400 transition-colors w-full"
+										className="flex items-center space-x-3 text-amber-400 hover:text-amber-500 transition-colors w-full"
 									>
 										<Home className="w-5 h-5" />
 										<span>Home</span>
@@ -107,7 +107,7 @@ const AppContent = () => {
 									<Link
 										to="/suites"
 										onClick={toggleSidebar}
-										className="flex items-center space-x-3 text-gray-600 hover:text-amber-400 transition-colors w-full"
+										className="flex items-center space-x-3 text-amber-400 hover:text-amber-500 transition-colors w-full"
 									>
 										<CalendarDays className="w-5 h-5" />
 										<span>Suites</span>
@@ -115,7 +115,7 @@ const AppContent = () => {
 									<Link
 										to="/profile"
 										onClick={toggleSidebar}
-										className="flex items-center space-x-3 text-gray-600 hover:text-amber-400 transition-colors w-full"
+										className="flex items-center space-x-3 text-amber-400 hover:text-amber-500 transition-colors w-full"
 									>
 										<User className="w-5 h-5" />
 										<span>Profile</span>
@@ -124,7 +124,7 @@ const AppContent = () => {
 										<Link
 											to="/admin"
 											onClick={toggleSidebar}
-											className="flex items-center space-x-3 text-gray-600 hover:text-amber-400 transition-colors w-full"
+											className="flex items-center space-x-3 text-amber-400 hover:text-amber-500 transition-colors w-full"
 										>
 											<Star className="w-5 h-5" />
 											<span>Admin</span>

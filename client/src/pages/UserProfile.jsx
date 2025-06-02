@@ -55,8 +55,8 @@ const UserProfile = () => {
 	const bookings = activeTab === "current" ? currentBookings : pastBookings;
 
 	return (
-		<div className="py-12 w-full h-full min-h-screen mx-auto bg-g">
-			<div className="w-9/12 h-screen mx-auto font-young">
+		<div className="py-12 w-full min-h-screen bg-g">
+			<div className="w-9/12 mx-auto font-young">
 				<AnimatedDiv className="flex justify-between">
 					<h1 className="text-4xl font-bold text-a mb-8 font-young-med">My Profile</h1>
 					<button
@@ -103,14 +103,6 @@ const UserProfile = () => {
 							}`}
 						>
 							Current Bookings
-						</button>
-						<button
-							onClick={() => setActiveTab("past")}
-							className={`px-6 py-3 rounded-lg font-semibold transition-all ${
-								activeTab === "past" ? "bg-amber-400 text-g" : "bg-b text-g hover:bg-c"
-							}`}
-						>
-							Past Bookings
 						</button>
 					</div>
 				</AnimatedDiv>

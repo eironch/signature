@@ -47,17 +47,15 @@ const Home = () => {
 							BOOK NOW
 						</button>
 					</div>
-
-					<div className="flex w-full h-screen items-center justify-center">
-						<div className="relative w-8/12">
-							<img className="absolute w-full h-full object-cover z-0" src={HallImage} />
-							{/* <div className="w-1/3"></div> */}
+					<div className="flex w-screen min-h-screen justify-center items-center py-26">
+						<div className="flex sm:px-96 px-6">
 							<div className="w- flex flex-col items-end z-10 relative">
-								<p className="text-justify text-g pb-8 pl-8 font-young-med text-8xl w-2/4 bg-b rounded-bl-2xl">
+								<img className="w-full sm:h-96 object-cover" src={HallImage} />
+								<p className="text-left text-g pb-8 font-young-med sm:text-8xl text-6xl bg-b rounded-bl-2xl">
 									ELEGANCE, SERENE, & GRANDEUR
 								</p>
-								<div className="flex justify-end items-end w-full">
-									<div className="flex flex-col w-4/12 bg-b pl-8">
+								<div className="flex items-end w-full">
+									<div className="flex flex-col bg-b content-between">
 										<p className="text-xl mb-8 font-young text-f text-justify">
 											Experience luxury with Signature. Stay within the four walls of status and
 											statement, the same magnificence that put Signature into the Forbes Travel
@@ -75,18 +73,18 @@ const Home = () => {
 						</div>
 					</div>
 
-					<div className="relative">
-						<img className="z-0" src={Divider0Image} />
-						<div className="absolute inset-0 bg-g/60 justify-center items-center flex flex-col">
-							<p className="font-young-med text-6xl text-a mb-4">LUXURY SUITES</p>
-							<p className="font-young text-b text-xl">
+					<div className="relative w-screen">
+						<img className="z-0 h-full w-full object-cover absolute inset-0" src={Divider0Image} />
+						<div className="z-10 relative bg-g/60 justify-center items-center flex flex-col py-12">
+							<p className="font-young-med sm:text-6xl text-4xl text-a mb-4">LUXURY SUITES</p>
+							<p className="font-young text-b sm:text-xl text-xs w-9/12">
 								Indulge in the epitome of luxury with our meticulously designed suites, each
-								offering a <br /> unique experience of sophistication and comfort.
+								offering a unique experience of sophistication and comfort.
 							</p>
 						</div>
 					</div>
 
-					<div className="min-h-screen flex justify-center py-26">
+					<div className="min-h-screen w-screen flex justify-center py-26">
 						<div className="flex flex-col gap-20 w-10/12">
 							{suites.map((suite) => (
 								<SuiteCard key={suite.id} suite={suite} onBook={handleBook} />
@@ -94,14 +92,13 @@ const Home = () => {
 						</div>
 					</div>
 
-					<div className="relative">
-						<img className="z-0" src={Divider1Image} />
-						<div className="absolute inset-0 bg-g/60 justify-center items-center flex flex-col">
-							<p className="font-young-med text-6xl text-a mb-4">WHAT OUR GUESTS SAY</p>
-							<p className="font-young text-b text-xl">
-								Discover why discerning travelers choose us for extraordinary moments,
-								<br />
-								as each stay is crafted to surpass expectations and create lasting memories.
+					<div className="relative w-screen">
+						<img className="z-0 h-full w-full object-cover absolute inset-0" src={Divider1Image} />
+						<div className="z-10 relative bg-g/60 justify-center items-center flex flex-col py-12">
+							<p className="font-young-med sm:text-6xl text-4xl text-a mb-4">WHAT OUR GUESTS SAY</p>
+							<p className="font-young text-b sm:text-xl text-xs w-9/12">
+								Discover why discerning travelers choose us for extraordinary moments, as each stay
+								is crafted to surpass expectations and create lasting memories.
 							</p>
 						</div>
 					</div>
@@ -114,8 +111,8 @@ const Home = () => {
 
 					<div className="relative">
 						<div className="bg-f py-20 justify-center items-center flex flex-col">
-							<p className="font-young-med text-6xl text-a mb-4">GET EXCLUSIVE DEALS</p>
-							<p className="font-young text-b">
+							<p className="font-young-med sm:text-6xl text-4xl text-a mb-4">GET EXCLUSIVE DEALS</p>
+							<p className="font-young text-b w-9/12">
 								Join our exclusive membership to receive personalized offers, priority reservations,
 								and complimentary upgrades.
 							</p>
@@ -125,7 +122,7 @@ const Home = () => {
 					<div className="flex flex-col">
 						<div className="bg-g pt-20 pb-10 justify-center items-center flex flex-col gap-20">
 							<div>
-								<p className="font-young-med text-6xl text-a mb-4">SIGNATURÉ</p>
+								<p className="font-young-med sm:text-6xl text-4xl text-a mb-4">SIGNATURÉ</p>
 								<p className="font-young text-a">
 									Creating luxurious experiences and unforgettable moments for our distinguished
 									guests.
