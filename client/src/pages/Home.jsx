@@ -50,7 +50,7 @@ const Home = () => {
 					<div className="flex w-screen min-h-screen justify-center items-center py-40">
 						<div className="flex sm:px-96 px-6">
 							<div className="w- flex flex-col items-end z-10 relative">
-								<img className="w-full sm:h-96 object-cover" src={HallImage} />
+								<img className="w-full sm:h-96 object-cover my-12 rounded-2xl" src={HallImage} />
 								<p className="text-left text-g pb-8 font-young-med sm:text-8xl text-6xl bg-b rounded-bl-2xl">
 									ELEGANCE, SERENE, & GRANDEUR
 								</p>
